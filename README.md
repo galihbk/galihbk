@@ -1,4 +1,4 @@
-# 👋 Halo, Saya [Nama Kamu]!
+# 👋 Halo, Saya Galih Bagaskoro!
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=3498DB&center=true&vCenter=true&width=500&lines=Halo!+Selamat+Datang!;Saya+adalah+developer+fullstack;Mari+kolaborasi+di+GitHub!" />
 
