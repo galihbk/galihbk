@@ -24,12 +24,3 @@
 [![GitHub](https://img.shields.io/badge/GitHub-galihbk-black?style=flat&logo=github)](https://github.com/galihbk)  
 
 ---
-
-💡 **Tip:**  
-- Ganti `yourusername` dengan username GitHub-mu  
-- Bisa tambahkan lebih banyak animasi seperti **GIF**, **SVG**, atau **badge tambahan**  
-
----
-
-Sekarang profil GitHub-mu akan tampil dengan animasi keren! 🚀  
-Jika ingin saya buatkan file `README.md` langsung di **canvas**, beritahu saya! 😃
