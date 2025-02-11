@@ -1,163 +1,46 @@
-# GitHub Profile 3D Contrib.
+[![](https://raw.githubusercontent.com/adamalston/adamalston/master/profile.gif)](https://www.galihbagaskoro.my.id/)<!-- If you want the template for my gif, email me! -->
 
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-gitblock.svg)
+### Languages
 
-[日本語](./docs/README.ja-jp.md) | [Español](./docs/README.es-es.md)
+![Python](https://img.shields.io/badge/-Python-000?&logo=Python)
+![JavaScript](https://img.shields.io/badge/-JavaScript-000?&logo=JavaScript)
+![C](https://img.shields.io/badge/-C-000?&logo=C)
+![Java](https://img.shields.io/badge/-Java-000?&logo=Java&logoColor=007396)
+![TypeScript](https://img.shields.io/badge/-TypeScript-000?&logo=TypeScript)
+![C++](https://img.shields.io/badge/-C++-000?&logo=c%2b%2b&logoColor=00599C)
+![SQL](https://img.shields.io/badge/-SQL-000?&logo=MySQL)
+![Swift](https://img.shields.io/badge/-Swift-000?&logo=Swift)
 
-## Overview
+### Technologies
 
-This GitHub Action creates a GitHub contribution calendar on a 3D profile image.
+![AWS](https://img.shields.io/badge/-AWS-000?&logo=Amazon-AWS&logoColor=F90)
+![Docker](https://img.shields.io/badge/-Docker-000?&logo=Docker)
+![Kubernetes](https://img.shields.io/badge/-Kubernetes-000?&logo=Kubernetes)
+![Linux](https://img.shields.io/badge/-Linux-000?&logo=Linux)
+![Node.js](https://img.shields.io/badge/-Node.js-000?&logo=node.js)
+![PyTorch](https://img.shields.io/badge/-PyTorch-000?&logo=PyTorch)
+![React](https://img.shields.io/badge/-React-000?&logo=React)
+![Redis](https://img.shields.io/badge/-Redis-000?&logo=Redis)
+![Spring](https://img.shields.io/badge/-Spring-000?&logo=Spring)
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-000?&logo=TensorFlow)
 
-## How to use (GitHub Actions) - Basic
+### Full Stack Projects
 
-This action generate your github profile 3d contribute calendar and make a commit to your repo.
-You can also trigger action by yourself after add this action.
+[![](https://img.shields.io/badge/-🧬%20My%20Website-000)](https://github.com/adamalston/v2)
+[![](https://img.shields.io/badge/-🦠%20COVID‑19%20Dashboard-000)](https://github.com/adamalston/COVID-19-Dashboard)
+[![](https://img.shields.io/badge/-📝%20Summarizer-000)](https://github.com/adamalston/Summarizer)
+[![](https://img.shields.io/badge/-🔬%20Overwatch-000)](https://github.com/adamalston/overwatch)
+[![](https://img.shields.io/badge/-🛰%20KubeSat-000)](https://github.com/adamalston/kubesat)
+[![](https://img.shields.io/badge/-🔊%20Voice%20Poker-000)](https://github.com/adamalston/Poker)
+[![](https://img.shields.io/badge/-🗺%20PokémonGo%20Map-000)](https://github.com/adamalston/PokemonGo-Map)
 
-### step 1. Create special repository.
+### Cybersecurity Projects
 
-Create a repository on GitHub with the same name as your user name.
+[![](https://img.shields.io/badge/-🩸%20Heartbleed-000)](https://github.com/adamalston/Heartbleed)
+[![](https://img.shields.io/badge/-🌊%20SYN%20Flood-000)](https://github.com/adamalston/SYN-Flood)
+[![](https://img.shields.io/badge/-🗂%20Packet%20Sniffing%20%26%20Spoofing-000)](https://github.com/adamalston/Packet-Sniffing-and-Spoofing)
+[![](https://img.shields.io/badge/-💉%20SQL%20Injection-000)](https://github.com/adamalston/SQL-Injection)
+[![](https://img.shields.io/badge/-🛡%20Spectre%20%26%20Meltdown-000)](https://github.com/adamalston/Meltdown-Spectre)
+[![](https://img.shields.io/badge/-🌐%20Network%20Tools-000)](https://github.com/adamalston/Network-Tools)
 
-* e.g. If the user name is `octocat`, create a repository named `octocat/octocat`.
-* ref. [Managing your profile README](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme)
-
-In this repository, do the following.
-
-### step 2. Create workflow file.
-
-Create a workflow file like the one below.
-
-* `.github/workflows/profile-3d.yml`
-
-The schedule is set to start once a day.
-Please correct the startup time to a convenient time.
-
-```yaml:.github/workflows/profile-3d.yml
-name: GitHub-Profile-3D-Contrib
-
-on:
-  schedule: # 03:00 JST == 18:00 UTC
-    - cron: "0 18 * * *"
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
-    steps:
-      - uses: actions/checkout@v3
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-      - name: Commit & Push
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add -A .
-          git commit -m "generated"
-          git push
-```
-
-Note: If you also want to include the private repository, register the "personal access token" in the repository and set it to GITHUB_TOKEN specified in the workflow file.
-
-This will add the action to the repository.
-
-#### Environment variables
-
-* `GITHUB_TOKEN` : (required) access token
-* `USERNAME` : (required) target user name (or specify with an argument).
-* `MAX_REPOS` : (optional) max repositories, default 100 - since ver. 0.2.0
-* `SETTING_JSON` : (optional) settings json file path. See `sample-settings/*.json` and `src/type.ts` in `yoshi389111/github-profile-3d-contrib` repository for details. - since ver. 0.6.0
-
-### step 3. Manually launch the action
-
-Launch the added action.
-
-* `Actions` -> `GitHub-Profile-3D-Contrib` -> `Run workflow`
-
-The profile image is generated with the following paths.
-
-* `profile-3d-contrib/profile-green-animate.svg`
-* `profile-3d-contrib/profile-green.svg`
-* `profile-3d-contrib/profile-season-animate.svg`
-* `profile-3d-contrib/profile-season.svg`
-* `profile-3d-contrib/profile-south-season-animate.svg`
-* `profile-3d-contrib/profile-south-season.svg`
-* `profile-3d-contrib/profile-night-view.svg`
-* `profile-3d-contrib/profile-night-green.svg`
-* `profile-3d-contrib/profile-night-rainbow.svg`
-* `profile-3d-contrib/profile-gitblock.svg`
-
-Alternatively, if `SETTING_JSON` is specified, the following image will be generated.
-
-* `profile-3d-contrib/profile-customize.svg`
-
-example: green version
-
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-green-animate.svg)
-
-example: season version (Northern Hemisphere.)
-
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-season-animate.svg)
-
-example: season version (Southern Hemisphere.)
-
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-south-season-animate.svg)
-
-example: night view version
-
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-night-view.svg)
-
-example: night green version
-
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-night-green.svg)
-
-example: night rainbow version
-
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-night-rainbow.svg)
-
-example: git block version
-
-![svg](https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/docs/demo/profile-gitblock.svg)
-
-### step 4. Add image to README.md
-
-Add the path of the generated image to the readme file.
-
-e.g.
-
-```md
-![](./profile-3d-contrib/profile-green-animate.svg)
-```
-
-## How to use (GitHub Actions) - Advanced examples
-
-#### [More info in EXAMPLES.md](./EXAMPLES.md)
-
-## How to use (local)
-
-Set the `GITHUB_TOKEN` environment variable to the value of "personal access token".
-
-```shell-session
-export GITHUB_TOKEN=XXXXXXXXXXXXXXXXXXXXX
-```
-
-Run it with your GitHub user specified.
-
-```shell-session
-node_modules/.bin/ts-node src/index.ts USER_NAME
-```
-
-or
-
-```shell-session
-npm run build
-node . USER_NAME
-```
-
-
-## Licence
-
-MIT License
-
-(C) 2021 SATO, Yoshiyuki
+<a href="https://www.adamalston.com/"><img height="137px" src="https://github-readme-stats.vercel.app/api?username=adamalston&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV --><img height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adamalston&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&exclude_repo=comp426,Redventures-Movie-Quotes&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /></a>
