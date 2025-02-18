@@ -5,8 +5,8 @@
 ![Coding GIF](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
 
 ## 🔥 Statistik GitHub Saya  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=galihbke&show_icons=true&theme=tokyonight)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?usernam=galihbk&layout=compact&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=galihbk&show_icons=true&theme=tokyonight)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=galihbk&layout=compact&theme=tokyonight)
 
 ---
 
