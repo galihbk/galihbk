@@ -22,7 +22,7 @@
 ### 📫 Hubungi Saya  
 [![Email](https://img.shields.io/badge/Email-net.galih7@gmail.com-blue?style=flat&logo=gmail)](mailto:net.galih7@gmail.com)  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-galihbagaskoro-blue?style=flat&logo=linkedin)](https://linkedin.com/in/galihbagaskoro)  
-[![GitHub](https://img.shields.io/badge/GitHub-galihbk-bluek?style=flat&logo=github)](https://github.com/galihbk)  
+[![GitHub](https://img.shields.io/badge/GitHub-galihbk-blue?style=flat&logo=github)](https://github.com/galihbk)  
 [![GitHub](https://img.shields.io/badge/Youtube-galih.bagaskoro-blue?style=flat&logo=youtube)](https://youtube.com/@galih.bagaskoro)  
 
 ---
